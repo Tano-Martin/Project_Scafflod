@@ -37,3 +37,18 @@ class BenefitAdmin(admin.ModelAdmin):
 
     images_view.short_description = 'Aperçu des images' # Titre de l'onglet dans l'admin
 
+@admin.register(models.Pack)
+class PackAdmin(admin.ModelAdmin):
+        # Liste des champs a afficher
+    list_display = ('title', 'price', 'period', 'label', 'title_label', 'activate', 'date_add', 'date_update', 'status')
+
+        # Configuration du champ de recherche
+    search_fields = ('title', 'date_add')
+
+@admin.register(models.Advantage)
+class AdvantageAdmin(admin.ModelAdmin):
+        # Liste des champs a afficher
+    list_display = ('label', 'label_activate', 'date_add', 'date_update', 'status')
+
+        # Configuration du champ de recherche
+    search_fields = ('label', 'date_add')
