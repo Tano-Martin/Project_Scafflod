@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path('portfolio-details.html/', portfolio, name="portfolio"),
+    path('portfolio-details.html/portfolio-details.html/', portfolio, name="portfolio"),
     path('portfolio-details.html/index.html', index, name="index"),
     
 ]
