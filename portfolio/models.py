@@ -34,11 +34,12 @@ class Partner(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=255)
+    title = models.CharField(max_length=255)
     description = models.TextField()
     client = models.CharField(max_length=255)
     date_project = models.DateField()
     url_project = models.CharField(max_length=255)
-    pictures = models.ManyToManyField("portfolio.PictureProject", related_name='pictures_project')
+    categorie = models.ForeignKey("portfolio.Category", related_name='cate_projects', on_delete=models.CASCADE, null=True, blank=True)
 
         # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
@@ -55,7 +56,7 @@ class Project(models.Model):
 
 class PictureProject(models.Model):
     picture = models.FileField()
-
+    projet = models.ForeignKey("portfolio.Project", related_name='project_pictures', on_delete=models.CASCADE, null=True, blank=True)
         # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
@@ -65,8 +66,6 @@ class PictureProject(models.Model):
         verbose_name = 'PictureProject'
         verbose_name_plural = 'PictureProjects'
 
-    def __str__(self):
-        return self.picture
 
 class Testimonial(models.Model):
     name = models.CharField(max_length=255)

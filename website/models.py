@@ -5,6 +5,7 @@ class About(models.Model):
     title = models.CharField(max_length=255)
     subtitle = models.TextField()
     picture = models.FileField()
+    footer = models.TextField(null=True, blank=True)
     option = models.ManyToManyField("website.OptionAbout", related_name="Option_about")
 
         # Champs obligatoires (Convention de NaN)
@@ -97,7 +98,7 @@ class Website(models.Model):
     location = models.CharField(max_length=255)
     email = models.EmailField()
     contact = models.CharField(max_length=255)
-    maps = models.FileField()
+    maps = models.TextField()
     copyrights = models.CharField(max_length=255)
 
         # Champs obligatoires (Convention de NaN)
@@ -115,7 +116,7 @@ class Website(models.Model):
 class SocialIcon(models.Model):
     name = models.CharField(max_length=255)
     lien = models.CharField(max_length=255)
-    icon = models.FileField()
+    icon = models.CharField(max_length=255)
 
         # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
