@@ -14,10 +14,15 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(models.Partner)
 class PartnerAdmin(admin.ModelAdmin):
         #liste des champs a afficher
-    list_display = ('name', 'logo', 'date_add', 'date_update', 'status')
+    list_display = ('images_view', 'name', 'date_add', 'date_update', 'status')
 
         # Configuration du champ de recherche
     search_fields = ('name', 'date_add')
+
+    def images_view(self, obj): #Permet d'avoir un aperçu des images
+        return mark_safe(f'<img src="{obj.logo.url}" style="height:100px; width:200px">')
+
+    images_view.short_description = 'Aperçu des images' # Titre de l'onglet dans l'admin
 
 @admin.register(models.Project)
 class ProjectAdmin(admin.ModelAdmin):
@@ -38,13 +43,13 @@ class PictureProjectAdmin(admin.ModelAdmin):
 @admin.register(models.Testimonial)
 class TestimonialAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
-    list_display = ('name', 'poste', 'picture', 'message', 'date_add', 'date_update', 'status')
+    list_display = ('images_view', 'name', 'poste', 'date_add', 'date_update', 'status')
 
         # Configuration du champ de recherche
     search_fields = ('name', 'date_add')
 
     def images_view(self, obj): #Permet d'avoir un aperçu des images
-        return mark_safe('<img src="{obj.image.url}" style="height:50px; width:100px">'.format(url=obj.image.url))
+        return mark_safe(f'<img src="{obj.picture.url}" style="height:100px; width:200px">')
 
     images_view.short_description = 'Aperçu des images' # Titre de l'onglet dans l'admin
 
