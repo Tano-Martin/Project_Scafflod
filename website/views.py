@@ -9,6 +9,7 @@ def index(request):
     cartegories = models_portfolio.Category.objects.filter(status=True)
     websites = models.Website.objects.filter(status=True)
     partners = models_portfolio.Partner.objects.filter(status=True)
+    teams = models.Team.objects.filter(status=True)
     return render(request, "index.html", locals())
 
 
