@@ -7,6 +7,8 @@ def index(request):
     banner = models.Banner.objects.filter(status=True).first()
     projets = models_portfolio.Project.objects.filter(status=True)
     cartegories = models_portfolio.Category.objects.filter(status=True)
+    websites = models.Website.objects.filter(status=True)
+    partners = models_portfolio.Partner.objects.filter(status=True)
     return render(request, "index.html", locals())
 
 

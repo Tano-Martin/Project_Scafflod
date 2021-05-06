@@ -43,7 +43,9 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="{% url 'index' %}">Scaffold</a></h1>
+        {% for website in websites %}
+          <h1><a href="{% url 'index' %}">{{ website.name_site }}</a></h1>
+        {% endfor %}
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="{% url 'index' %}"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -98,13 +100,15 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Scaffold</h3>
-              <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
+              {% for website in websites %}
+                <h3>{{ website.name_site }}</h3>
+                <p>
+                  A108 Adam Street <br>
+                  NY 535022, USA<br><br>
+                  <strong>Phone:</strong>{{ website.contact }}<br>
+                  <strong>Email:</strong>{{ website.email }}<br>
+                </p>
+              {% endfor %}
               <div class="social-links mt-3">
                 {% for social in sociaux %}
                   <a href="{{ social.lien }}" class="twitter"><i class="{{ social.icon }}"></i></a>
