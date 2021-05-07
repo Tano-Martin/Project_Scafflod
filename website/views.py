@@ -10,6 +10,8 @@ def index(request):
     websites = models.Website.objects.filter(status=True)
     partners = models_portfolio.Partner.objects.filter(status=True)
     teams = models.Team.objects.filter(status=True)
+    about = models.About.objects.filter(status=True).first()
+    optionabouts = models.OptionAbout.objects.filter(status=True)
     return render(request, "index.html", locals())
 
 

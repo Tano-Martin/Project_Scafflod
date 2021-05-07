@@ -7,8 +7,8 @@ from django.utils.safestring import mark_safe
 @admin.register(models.About)
 class AboutAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
-    list_display = ('images_view', 'title', 'subtitle', 'footer', 'date_add', 'date_update', 'status')
-    list_display_links = ('images_view', 'title', 'subtitle')
+    list_display = ('images_view', 'title', 'date_add', 'date_update', 'status')
+    list_display_links = ('images_view', 'title')
 
         # Configuration du champ de recherche
     search_fields = ('title', )
@@ -27,6 +27,8 @@ class OptionAboutAdmin(admin.ModelAdmin):
 
         # Configuration du champ de recherche
     search_fields = ('description', 'date_add')
+
+    list_editable = ('status',)
 
 
 @admin.register(models.Banner)
