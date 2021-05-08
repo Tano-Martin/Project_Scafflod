@@ -6,15 +6,11 @@ from django.utils.safestring import mark_safe
 @admin.register(models.Service)
 class ServiceAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
-    list_display = ('images_view' ,'title', 'description', 'color', 'date_add', 'date_update', 'status')
+    list_display = ('title', 'icon', 'description', 'color', 'date_add', 'date_update', 'status')
 
         # Configuration du champ de recherche
     search_fields = ('title', 'date_add')
 
-    def images_view(self, obj): #Permet d'avoir un aperçu des images
-        return mark_safe(f'<img src="{obj.icon.url}" style="height:100px; width:200px">')
-
-    images_view.short_description = 'Aperçu des images' # Titre de l'onglet dans l'admin
 
 @admin.register(models.Faq)
 class FaqAdmin(admin.ModelAdmin):
