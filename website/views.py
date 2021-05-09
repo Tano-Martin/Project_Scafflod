@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from . import models
 from portfolio import models as models_portfolio
 from service import models as models_service
+from .formulaire import ContactForm
 
 
 def index(request):
@@ -16,6 +17,13 @@ def index(request):
     services = models_service.Service.objects.filter(status=True)
     faqs = models_service.Faq.objects.filter(status=True)
     testimonials = models_portfolio.Testimonial.objects.filter(status=True)
+
+    if request.method == "POST":
+        form = ContactForm(request.POST).save()
+        return redirect("/index")
+    else :
+        form = ContactForm()
+
     return render(request, "index.html", locals())
 
 

@@ -432,6 +432,13 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-left">
+
+              <form method="POST" role="form" class="php-email-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-center"><button type="submit" class="save btn">Send Message</button></div>
+              </form>
+
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="row">
                   <div class="form-group col-md-6">
