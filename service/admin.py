@@ -20,8 +20,8 @@ class FaqAdmin(admin.ModelAdmin):
         # Configuration du champ de recherche
     search_fields = ('question', 'date_add')
 
-@admin.register(models.Benefit)
-class BenefitAdmin(admin.ModelAdmin):
+@admin.register(models.Prestation)
+class PrestationAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
     list_display = ( 'images_view', 'title', 'description', 'date_add', 'date_update', 'status')
 
@@ -36,7 +36,7 @@ class BenefitAdmin(admin.ModelAdmin):
 @admin.register(models.Pack)
 class PackAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
-    list_display = ('title', 'price', 'period', 'label', 'title_label', 'activate', 'date_add', 'date_update', 'status')
+    list_display = ('title', 'price', 'period', 'marque', 'title_marque', 'activate', 'date_add', 'date_update', 'status')
 
         # Configuration du champ de recherche
     search_fields = ('title', 'date_add')
@@ -44,7 +44,7 @@ class PackAdmin(admin.ModelAdmin):
 @admin.register(models.Advantage)
 class AdvantageAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
-    list_display = ('label', 'label_activate', 'date_add', 'date_update', 'status')
+    list_display = ('title', 'title_activate', 'date_add', 'date_update', 'status')
 
         # Configuration du champ de recherche
-    search_fields = ('label', 'date_add')
+    search_fields = ('title', 'date_add')

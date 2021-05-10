@@ -1,4 +1,6 @@
 from django.db import models
+from django.forms import ModelForm
+
 
 # Create your models here.
 class About(models.Model):
@@ -150,3 +152,11 @@ class Team(models.Model):
 
     def __str__(self):
         return self.name
+
+
+    
+#formulaire
+class Contactform(ModelForm):
+    class Meta: # une classe qui utilise des classes
+        model = Contact
+        fields = ['name', 'email', 'subject', 'message']
