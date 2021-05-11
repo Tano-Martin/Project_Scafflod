@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Service(models.Model):
     title = models.CharField(max_length=255)
-    icon = models.FileField()
+    icon = models.CharField(max_length=255)
     description = models.TextField()
     color = models.CharField(max_length=255)
 
@@ -35,7 +35,7 @@ class Faq(models.Model):
     def __str__(self):
         return self.question
 
-class Benefit(models.Model):
+class Prestation(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     picture = models.FileField()
@@ -46,8 +46,8 @@ class Benefit(models.Model):
     status = models.BooleanField(default=True)
 
     class Meta():
-        verbose_name = 'Benefit'
-        verbose_name_plural = 'Benefits'
+        verbose_name = 'Prestation'
+        verbose_name_plural = 'Prestations'
 
     def __str__(self):
         return self.title
@@ -56,8 +56,8 @@ class Pack(models.Model):
     title = models.CharField(max_length=255)
     price = models.FloatField(default=0)
     period = models.CharField(max_length=255)
-    label = models.BooleanField(default=False)
-    title_label = models.CharField(max_length=255)
+    marque = models.BooleanField(default=False)
+    title_marque = models.CharField(max_length=255, null=True)
     activate = models.BooleanField(default=False)
 
         # Champs obligatoires (Convention de NaN)
@@ -73,8 +73,8 @@ class Pack(models.Model):
         return self.title
 
 class Advantage(models.Model):
-    label = models.CharField(max_length=255)
-    label_activate = models.BooleanField(default=True)
+    title = models.CharField(max_length=255)
+    title_activate = models.BooleanField(default=True)
     pack = models.ManyToManyField("service.Pack", related_name="advantage_pack")
 
         # Champs obligatoires (Convention de NaN)
@@ -88,3 +88,4 @@ class Advantage(models.Model):
 
     def __str__(self):
         return self.label
+

@@ -7,8 +7,8 @@ from django.utils.safestring import mark_safe
 @admin.register(models.About)
 class AboutAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
-    list_display = ('images_view', 'title', 'subtitle', 'footer', 'date_add', 'date_update', 'status')
-    list_display_links = ('images_view', 'title', 'subtitle')
+    list_display = ('images_view', 'title', 'date_add', 'date_update', 'status')
+    list_display_links = ('images_view', 'title')
 
         # Configuration du champ de recherche
     search_fields = ('title', )
@@ -28,19 +28,21 @@ class OptionAboutAdmin(admin.ModelAdmin):
         # Configuration du champ de recherche
     search_fields = ('description', 'date_add')
 
+    list_editable = ('status',)
+
 
 @admin.register(models.Banner)
 class BannerAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
-    list_display = ('title', 'picture', 'date_add', 'date_update', 'status')
-    list_display_links = ('picture', 'date_add', 'date_update')
-    list_editable = ('title', 'status', )
+    list_display = ( 'images_view', 'title', 'date_add', 'date_update', 'status')
+    list_display_links = ('title', 'date_add', 'date_update')
+    list_editable = ('status', )
 
         # Configuration du champ de recherche
     search_fields = ('title', 'date_add')
 
     def images_view(self, obj): #Permet d'avoir un aperçu des images
-        return mark_safe('<img src="{obj.image.url}" style="height:50px; width:100px">'.format(url=obj.image.url))
+        return mark_safe(f'<img src="{obj.picture.url}" style="height:100px; width:200px">')
 
     images_view.short_description = 'Aperçu des images' # Titre de l'onglet dans l'admin
 
@@ -73,25 +75,25 @@ class WebsiteAdmin(admin.ModelAdmin):
 @admin.register(models.SocialIcon)
 class SocialIconAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
-    list_display = ('name', 'lien', 'icon', 'date_add', 'date_update', 'status')
+    list_display = ('images_view', 'name', 'lien', 'date_add', 'date_update', 'status')
 
         # Configuration du champ de recherche
     search_fields = ('name', 'date_add')
 
     def images_view(self, obj): #Permet d'avoir un aperçu des images
-        return mark_safe('<img src="{obj.image.url}" style="height:50px; width:100px">'.format(url=obj.image.url))
+        return mark_safe(f'<img src="{obj.icon.url}" style="height:100px; width:200px">')
 
     images_view.short_description = 'Aperçu des images' # Titre de l'onglet dans l'admin
 
 @admin.register(models.Team)
 class TeamAdmin(admin.ModelAdmin):
         # Liste des champs a afficher
-    list_display = ('name', 'poste', 'picture', 'twitter', 'facebook', 'linkedin', 'instagram', 'date_add', 'date_update', 'status')
+    list_display = ('images_view', 'name', 'poste', 'twitter', 'facebook', 'linkedin', 'instagram', 'date_add', 'date_update', 'status')
 
         # Configuration du champ de recherche
     search_fields = ('name', 'date_add')
 
     def images_view(self, obj): #Permet d'avoir un aperçu des images
-        return mark_safe('<img src="{obj.image.url}" style="height:50px; width:100px">'.format(url=obj.image.url))
+        return mark_safe(f'<img src="{obj.picture.url}" style="height:100px; width:200px">')
 
     images_view.short_description = 'Aperçu des images' # Titre de l'onglet dans l'admin
