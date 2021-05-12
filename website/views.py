@@ -33,5 +33,6 @@ def index(request):
 
 
 def portfolio(request, id):
+    website = models.Website.objects.filter(status=True).first()
     projet = get_object_or_404(models_portfolio.Project, id=id)
     return render(request, "portfolio-details.html", locals())
