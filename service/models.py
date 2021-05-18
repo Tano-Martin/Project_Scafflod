@@ -57,7 +57,7 @@ class Pack(models.Model):
     price = models.FloatField(default=0)
     period = models.CharField(max_length=255)
     marque = models.BooleanField(default=False)
-    title_marque = models.CharField(max_length=255, null=True)
+    title_marque = models.CharField(max_length=255, null=True, blank=True)
     activate = models.BooleanField(default=False)
 
         # Champs obligatoires (Convention de NaN)
@@ -87,5 +87,5 @@ class Advantage(models.Model):
         verbose_name_plural = 'Advantages'
 
     def __str__(self):
-        return self.label
+        return self.title
 

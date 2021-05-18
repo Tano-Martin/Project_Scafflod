@@ -18,6 +18,8 @@ def index(request):
     faqs = models_service.Faq.objects.filter(status=True)
     testimonials = models_portfolio.Testimonial.objects.filter(status=True)
     prestations = models_service.Prestation.objects.filter(status=True)
+    avantages = models_service.Advantage.objects.filter(status=True)
+    packs = models_service.Pack.objects.filter(status=True)
 
 
         #formulaire contact
@@ -36,3 +38,11 @@ def portfolio(request, id):
     website = models.Website.objects.filter(status=True).first()
     projet = get_object_or_404(models_portfolio.Project, id=id)
     return render(request, "portfolio-details.html", locals())
+
+def newletterpost(request):
+    newmail = request.POST.get('emailletter')
+    new = models.Newletter()
+    new.email = newmail
+    new.save()
+    retour = request.META.get('HTTP_REFERER')
+    return redirect(retour, '/')

@@ -1,12 +1,13 @@
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import index, portfolio
+from .views import index, portfolio, newletterpost
 
 
 urlpatterns = [
     path('', index, name="index"),
-    path('details/<int:id>/', portfolio, name="detail"),    
+    path('details/<int:id>/', portfolio, name="detail"),  
+    path("newletter-post/",  newletterpost, name="newletter_post")  
 ]
 
 

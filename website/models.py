@@ -97,6 +97,7 @@ class Website(models.Model):
     description_team = models.TextField()
     description_client = models.TextField()
     description_pricing = models.TextField()
+    description_newletter = models.TextField()
     location = models.CharField(max_length=255)
     email = models.EmailField()
     contact = models.CharField(max_length=255)
