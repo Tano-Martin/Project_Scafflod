@@ -1,16 +1,12 @@
 from django.db import models
-from django.forms import ModelForm
-
 
 # Create your models here.
 class About(models.Model):
     title = models.CharField(max_length=255)
     subtitle = models.TextField()
-    picture = models.FileField()
+    picture = models.FileField(upload_to='About_file')
     footer = models.TextField(null=True, blank=True)
     option = models.ManyToManyField("website.OptionAbout", related_name="Option_about")
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -25,8 +21,6 @@ class About(models.Model):
 
 class OptionAbout(models.Model):
     description = models.CharField(max_length=255)
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -41,9 +35,7 @@ class OptionAbout(models.Model):
 class Banner(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    picture = models.FileField()
-
-        # Champs obligatoires (Convention de NaN)
+    picture = models.FileField(upload_to='Banner_file')
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -60,8 +52,6 @@ class Contact(models.Model):
     email = models.EmailField()
     subject = models.CharField(max_length=255)
     message = models.TextField()
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -73,17 +63,15 @@ class Contact(models.Model):
     def __str__(self):
         return self.name
 
-class Newletter(models.Model):
+class Newsletter(models.Model):
     email = models.EmailField()
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
 
     class Meta():
-        verbose_name = 'Newletter'
-        verbose_name_plural = 'Newletters'
+        verbose_name = 'Newsletter'
+        verbose_name_plural = 'Newsletters'
 
     def __str__(self):
         return self.email
@@ -103,8 +91,6 @@ class Website(models.Model):
     contact = models.CharField(max_length=255)
     maps = models.TextField()
     copyrights = models.CharField(max_length=255)
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -118,10 +104,8 @@ class Website(models.Model):
 
 class SocialIcon(models.Model):
     name = models.CharField(max_length=255)
-    lien = models.CharField(max_length=255)
+    link = models.CharField(max_length=255)
     icon = models.CharField(max_length=255)
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -136,13 +120,11 @@ class SocialIcon(models.Model):
 class Team(models.Model):
     name = models.CharField(max_length=255)
     poste = models.CharField(max_length=255)
-    picture = models.FileField()
+    picture = models.FileField(upload_to='Team_file')
     twitter = models.URLField()
     facebook = models.URLField()
     linkedin = models.URLField()
     instagram = models.URLField()
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -154,10 +136,3 @@ class Team(models.Model):
     def __str__(self):
         return self.name
 
-
-    
-#formulaire
-class Contactform(ModelForm):
-    class Meta: # une classe qui utilise des classes
-        model = Contact
-        fields = ['name', 'email', 'subject', 'message']

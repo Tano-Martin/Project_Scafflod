@@ -3,8 +3,6 @@ from django.db import models
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=255)
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -18,9 +16,7 @@ class Category(models.Model):
 
 class Partner(models.Model):
     name = models.CharField(max_length=255)
-    logo = models.FileField()
-
-        # Champs obligatoires (Convention de NaN)
+    logo = models.FileField('Partner_file')
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -40,8 +36,6 @@ class Project(models.Model):
     date_project = models.DateField()
     url_project = models.CharField(max_length=255)
     categorie = models.ForeignKey("portfolio.Category", related_name='cate_projects', on_delete=models.CASCADE, null=True, blank=True)
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -55,9 +49,8 @@ class Project(models.Model):
 
 
 class PictureProject(models.Model):
-    picture = models.FileField()
+    picture = models.FileField(upload_to='PictureProject_file')
     projet = models.ForeignKey("portfolio.Project", related_name='project_pictures', on_delete=models.CASCADE, null=True, blank=True)
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -70,10 +63,8 @@ class PictureProject(models.Model):
 class Testimonial(models.Model):
     name = models.CharField(max_length=255)
     poste = models.CharField(max_length=255)
-    picture = models.FileField()
+    picture = models.FileField(upload_to='Testimonial_file')
     message = models.TextField()
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)

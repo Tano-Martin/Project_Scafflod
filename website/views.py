@@ -1,8 +1,8 @@
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import redirect, render
 from . import models
+from .forms import ContactForm, NewsletterForm
 from portfolio import models as models_portfolio
 from service import models as models_service
-
 
 
 def index(request):
@@ -20,29 +20,30 @@ def index(request):
     prestations = models_service.Prestation.objects.filter(status=True)
     avantages = models_service.Advantage.objects.filter(status=True)
     packs = models_service.Pack.objects.filter(status=True)
+    return render(request, "index.html", locals())
 
+def portfolio(request, id):
+    website = models.Website.objects.filter(status=True).first()
+    projet = models_portfolio.Project.objects.get(id=id)
+    return render(request, "portfolio-details.html", locals())
 
-        #formulaire contact
+#formulaire
+def contactPost(request):        
     if request.method == 'POST':
-        formCont = models.Contactform(request.POST)
+        formCont = ContactForm(request.POST)
         if formCont.is_valid():
             formCont.save()
         return redirect('index')
     else :
-        formCont = models.Contactform()
+        formCont = ContactForm()
+        return redirect('index')
 
-    return render(request, "index.html", locals())
-
-
-def portfolio(request, id):
-    website = models.Website.objects.filter(status=True).first()
-    projet = get_object_or_404(models_portfolio.Project, id=id)
-    return render(request, "portfolio-details.html", locals())
-
-def newletterpost(request):
-    newmail = request.POST.get('emailletter')
-    new = models.Newletter()
-    new.email = newmail
-    new.save()
-    retour = request.META.get('HTTP_REFERER')
-    return redirect(retour, '/')
+def newsletterPost(request):
+    if request.method == 'POST':
+        formnew = NewsletterForm(request.POST)
+        if formnew.is_valid():
+            formnew.save()
+        return redirect('index')
+    else :
+        formnew = NewsletterForm()
+        return redirect('index')

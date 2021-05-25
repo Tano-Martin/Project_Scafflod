@@ -6,8 +6,6 @@ class Service(models.Model):
     icon = models.CharField(max_length=255)
     description = models.TextField()
     color = models.CharField(max_length=255)
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -22,8 +20,6 @@ class Service(models.Model):
 class Faq(models.Model):
     question = models.CharField(max_length=255)
     reponse = models.TextField()
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -38,9 +34,7 @@ class Faq(models.Model):
 class Prestation(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    picture = models.FileField()
-
-        # Champs obligatoires (Convention de NaN)
+    picture = models.FileField(upload_to='Prestation_file')
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -59,8 +53,6 @@ class Pack(models.Model):
     marque = models.BooleanField(default=False)
     title_marque = models.CharField(max_length=255, null=True, blank=True)
     activate = models.BooleanField(default=False)
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -76,8 +68,6 @@ class Advantage(models.Model):
     title = models.CharField(max_length=255)
     title_activate = models.BooleanField(default=True)
     pack = models.ManyToManyField("service.Pack", related_name="advantage_pack")
-
-        # Champs obligatoires (Convention de NaN)
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
