@@ -1,0 +1,238 @@
+[
+{
+  "model": "website.about",
+  "pk": 1,
+  "fields": {
+    "title": "Learn more about us",
+    "subtitle": "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate tera noden carma palorp mades tera.",
+    "picture": "about.jpeg",
+    "footer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "date_add": "2021-05-04T14:49:45.607Z",
+    "date_update": "2021-05-07T10:12:14.319Z",
+    "status": true,
+    "option": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "website.optionabout",
+  "pk": 1,
+  "fields": {
+    "description": "Ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "date_add": "2021-05-04T14:48:45.894Z",
+    "date_update": "2021-05-07T10:07:18.702Z",
+    "status": true
+  }
+},
+{
+  "model": "website.optionabout",
+  "pk": 2,
+  "fields": {
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit.",
+    "date_add": "2021-05-04T14:48:59.788Z",
+    "date_update": "2021-05-04T14:48:59.788Z",
+    "status": true
+  }
+},
+{
+  "model": "website.optionabout",
+  "pk": 3,
+  "fields": {
+    "description": "dedsdfgh",
+    "date_add": "2021-05-07T10:03:43.564Z",
+    "date_update": "2021-05-07T10:03:43.564Z",
+    "status": true
+  }
+},
+{
+  "model": "website.banner",
+  "pk": 1,
+  "fields": {
+    "title": "We design digital products that help grow businesses",
+    "description": "bienve,nue",
+    "picture": "hero-img.png",
+    "date_add": "2021-05-04T14:27:46.397Z",
+    "date_update": "2021-05-04T15:29:18.009Z",
+    "status": false
+  }
+},
+{
+  "model": "website.banner",
+  "pk": 2,
+  "fields": {
+    "title": "Nous concevons des produits numériques qui aident à développer les entreprises",
+    "description": "Nous sommes une équipe de designers talentueux qui créent des sites Web avec Bootstrap",
+    "picture": "hero-img_dAbgDyM.png",
+    "date_add": "2021-05-04T15:28:49.765Z",
+    "date_update": "2021-05-06T19:57:39.044Z",
+    "status": true
+  }
+},
+{
+  "model": "website.contact",
+  "pk": 4,
+  "fields": {
+    "name": "Tano Martin",
+    "email": "mathmart7@gmail.com",
+    "subject": "ty-y",
+    "message": "eret",
+    "date_add": "2021-05-25T22:11:59.939Z",
+    "date_update": "2021-05-25T22:11:59.940Z",
+    "status": true
+  }
+},
+{
+  "model": "website.contact",
+  "pk": 5,
+  "fields": {
+    "name": "Rufus",
+    "email": "abozanolivier@yahoo.fr",
+    "subject": "Demande de souscription au premium solo",
+    "message": "dsrddt",
+    "date_add": "2021-05-25T22:23:06.690Z",
+    "date_update": "2021-05-25T22:23:06.690Z",
+    "status": true
+  }
+},
+{
+  "model": "website.newsletter",
+  "pk": 1,
+  "fields": {
+    "email": "tanomartin@gmail.com",
+    "date_add": "2021-05-15T08:56:50.860Z",
+    "date_update": "2021-05-15T08:56:50.860Z",
+    "status": true
+  }
+},
+{
+  "model": "website.newsletter",
+  "pk": 2,
+  "fields": {
+    "email": "abozanolivier@yahoo.fr",
+    "date_add": "2021-05-25T22:42:24.986Z",
+    "date_update": "2021-05-25T22:42:24.986Z",
+    "status": true
+  }
+},
+{
+  "model": "website.website",
+  "pk": 1,
+  "fields": {
+    "name_site": "Échafaud",
+    "description_service": "Les peines d'un grand avantage à relever. Lui, en effet, aux nécessités de sa fuite est le résultat de quelque chose. Qu'il y ait consectetur velit. Quiconque a la cupidité. Et personne n'a à empêcher un reçoit le reste, pour le. Parce que cet homme a fui les devoirs à l'avantage, on se rend compte que c'est un quas.",
+    "description_portfolio": "Les peines d'un grand avantage à relever. Lui, en effet, aux nécessités de sa fuite est le résultat de quelque chose. Qu'il y ait consectetur velit. Quiconque a la cupidité. Et personne n'a à empêcher un reçoit le reste, pour le. Parce que cet homme a fui les devoirs à l'avantage, on se rend compte que c'est un quas.",
+    "call_action": "Vouloir être une douleur dans le cupidatat cillum a été critiqué dans la fuite Duis et dolore magna ne produit aucun plaisir résultant. Sauf que cupidatat les noirs ne sont pas excepteur, sont apaisants pour l'âme, c'est-à-dire qu'ils ont déserté les devoirs généraux de ceux qui sont à blâmer pour vos ennuis.",
+    "description_testimonial": "Les peines d'un grand avantage à relever. Lui, en effet, aux nécessités de sa fuite est le résultat de quelque chose. Qu'il y ait consectetur velit. Quiconque a la cupidité. Et personne n'a à empêcher un reçoit le reste, pour le. Parce que cet homme a fui les devoirs à l'avantage, on se rend compte que c'est un quas.",
+    "description_team": "Les peines d'un grand avantage à relever. Lui, en effet, aux nécessités de sa fuite est le résultat de quelque chose. Qu'il y ait consectetur velit. Quiconque a la cupidité. Et personne n'a à empêcher un reçoit le reste, pour le. Parce que cet homme a fui les devoirs à l'avantage, on se rend compte que c'est un quas.",
+    "description_client": "Les peines d'un grand avantage à relever. Lui, en effet, aux nécessités de sa fuite est le résultat de quelque chose. Qu'il y ait consectetur velit. Quiconque a la cupidité. Et personne n'a à empêcher un reçoit le reste, pour le. Parce que cet homme a fui les devoirs à l'avantage, on se rend compte que c'est un quas.",
+    "description_pricing": "Les peines d'un grand avantage à relever. Lui, en effet, aux nécessités de sa fuite est le résultat de quelque chose. Qu'il y ait consectetur velit. Quiconque a la cupidité. Et personne n'a à empêcher un reçoit le reste, pour le. Parce que cet homme a fui les devoirs à l'avantage, on se rend compte que c'est un quas.",
+    "description_newletter": "Tamen quem nulla quae legam multos aute sint culpa legam noster magna martin",
+    "location": "A108 Adam Street, New York, NY 535022",
+    "email": "info@example.com",
+    "contact": "+1 5589 55488 55s",
+    "maps": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621",
+    "copyrights": "© Copyright Scaffold . Tous les droits sont réservés",
+    "date_add": "2021-05-04T14:43:02.412Z",
+    "date_update": "2021-05-15T09:02:30.989Z",
+    "status": true
+  }
+},
+{
+  "model": "website.socialicon",
+  "pk": 1,
+  "fields": {
+    "name": "facebook",
+    "link": "facebokk.com/gyuj",
+    "icon": "bi bi-facebook",
+    "date_add": "2021-05-04T14:31:32.541Z",
+    "date_update": "2021-05-04T14:31:32.541Z",
+    "status": true
+  }
+},
+{
+  "model": "website.socialicon",
+  "pk": 2,
+  "fields": {
+    "name": "instagram",
+    "link": "instagram.om",
+    "icon": "bi bi-instagram",
+    "date_add": "2021-05-04T14:32:37.141Z",
+    "date_update": "2021-05-04T14:32:37.141Z",
+    "status": true
+  }
+},
+{
+  "model": "website.socialicon",
+  "pk": 3,
+  "fields": {
+    "name": "linkedin",
+    "link": "linkedin.com",
+    "icon": "bi bi-linkedin",
+    "date_add": "2021-05-04T14:33:16.438Z",
+    "date_update": "2021-05-04T15:43:20.166Z",
+    "status": true
+  }
+},
+{
+  "model": "website.socialicon",
+  "pk": 4,
+  "fields": {
+    "name": "twitter",
+    "link": "twitter.com",
+    "icon": "bi bi-twitter",
+    "date_add": "2021-05-04T14:33:50.180Z",
+    "date_update": "2021-05-04T15:43:23.709Z",
+    "status": true
+  }
+},
+{
+  "model": "website.team",
+  "pk": 1,
+  "fields": {
+    "name": "Walter White",
+    "poste": "Chief Executive Officer",
+    "picture": "team-1.jpg",
+    "twitter": "WalterWhite.com",
+    "facebook": "WalterWhite.com",
+    "linkedin": "WalterWhite.com",
+    "instagram": "WalterWhite.instagram",
+    "date_add": "2021-05-06T19:39:56.102Z",
+    "date_update": "2021-05-06T19:39:56.102Z",
+    "status": true
+  }
+},
+{
+  "model": "website.team",
+  "pk": 2,
+  "fields": {
+    "name": "Sarah Jhonson",
+    "poste": "Product Manager",
+    "picture": "team-2.jpg",
+    "twitter": "Sarah Jhonson",
+    "facebook": "Sarah Jhonson",
+    "linkedin": "Sarah Jhonson",
+    "instagram": "Sarah Jhonson",
+    "date_add": "2021-05-06T19:40:46.094Z",
+    "date_update": "2021-05-06T19:40:46.094Z",
+    "status": true
+  }
+},
+{
+  "model": "website.team",
+  "pk": 3,
+  "fields": {
+    "name": "William Anderson",
+    "poste": "CTO",
+    "picture": "team-3.jpg",
+    "twitter": "William Anderson",
+    "facebook": "William Anderson",
+    "linkedin": "William Anderson",
+    "instagram": "William Anderson",
+    "date_add": "2021-05-06T19:41:28.117Z",
+    "date_update": "2021-05-06T19:41:28.117Z",
+    "status": true
+  }
+}
+]

@@ -1,0 +1,381 @@
+[
+{
+  "model": "portfolio.category",
+  "pk": 1,
+  "fields": {
+    "name": "APP",
+    "date_add": "2021-05-04T16:11:30.970Z",
+    "date_update": "2021-05-25T22:58:42.216Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.category",
+  "pk": 2,
+  "fields": {
+    "name": "CARD",
+    "date_add": "2021-05-04T16:11:57.105Z",
+    "date_update": "2021-05-25T22:58:35.725Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.category",
+  "pk": 3,
+  "fields": {
+    "name": "WEB",
+    "date_add": "2021-05-04T16:12:00.548Z",
+    "date_update": "2021-05-25T22:58:25.537Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.partner",
+  "pk": 1,
+  "fields": {
+    "name": "grabyo",
+    "logo": "client-8.png",
+    "date_add": "2021-05-06T20:06:34.476Z",
+    "date_update": "2021-05-06T20:06:34.476Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.partner",
+  "pk": 2,
+  "fields": {
+    "name": "oldendorff",
+    "logo": "client-7.png",
+    "date_add": "2021-05-06T20:07:00.234Z",
+    "date_update": "2021-05-06T20:07:00.234Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.partner",
+  "pk": 3,
+  "fields": {
+    "name": "trustly",
+    "logo": "client-6.png",
+    "date_add": "2021-05-06T20:07:20.403Z",
+    "date_update": "2021-05-06T20:07:20.403Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.partner",
+  "pk": 4,
+  "fields": {
+    "name": "citrus",
+    "logo": "client-5.png",
+    "date_add": "2021-05-06T20:07:37.028Z",
+    "date_update": "2021-05-06T20:07:37.028Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.partner",
+  "pk": 5,
+  "fields": {
+    "name": "lilly",
+    "logo": "client-4.png",
+    "date_add": "2021-05-06T20:07:49.868Z",
+    "date_update": "2021-05-06T20:07:49.868Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.partner",
+  "pk": 6,
+  "fields": {
+    "name": "lifegroups",
+    "logo": "client-3.png",
+    "date_add": "2021-05-06T20:08:06.164Z",
+    "date_update": "2021-05-06T20:08:06.164Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.partner",
+  "pk": 7,
+  "fields": {
+    "name": "belimo",
+    "logo": "client-2.png",
+    "date_add": "2021-05-06T20:08:20.833Z",
+    "date_update": "2021-05-06T20:08:20.833Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.partner",
+  "pk": 8,
+  "fields": {
+    "name": "myob",
+    "logo": "client-1.png",
+    "date_add": "2021-05-06T20:08:32.378Z",
+    "date_update": "2021-05-06T20:08:32.378Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 1,
+  "fields": {
+    "name": "Project information",
+    "title": "This is an example of portfolio detail",
+    "description": "Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.",
+    "client": "ASU Company",
+    "date_project": "2021-05-04",
+    "url_project": "www.example.com",
+    "categorie": 2,
+    "date_add": "2021-05-04T16:16:47.163Z",
+    "date_update": "2021-05-25T23:07:02.944Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 2,
+  "fields": {
+    "name": "Scaflod",
+    "title": "This is an example of portfolio detail",
+    "description": "L'explorateur de la. S'engage, par conséquent, n'a pas, pour les devoirs de ces symptômes ne doivent pas exercer les devoirs de répudié. Chaque fois que la responsabilité principale de dénoncer le plaisir le fait est méritoire. Mais il n'y avait pas de suivi lorsque vous le perdez.",
+    "client": "Nan business",
+    "date_project": "2021-05-04",
+    "url_project": "www.jetanime.com",
+    "categorie": 2,
+    "date_add": "2021-05-04T16:17:28.492Z",
+    "date_update": "2021-05-25T23:06:49.906Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 3,
+  "fields": {
+    "name": "Heath Care",
+    "title": "Ceci est un exemple de détail de portefeuille",
+    "description": "Maintenant, c'est sur le corps. Qui a appelé pour eux, parce que la douleur du travail, parce que c'est leur avantage? Ainsi pourrait l'explorateur de la. S'engage, par conséquent, n'a pas, pour les devoirs de ces symptômes ne doivent pas exercer les devoirs de répudié. Chaque fois que la responsabilité principale de dénoncer le plaisir le fait est méritoire. Mais il n'y avait pas de suivi lorsque vous le perdez.",
+    "client": "ASU Company",
+    "date_project": "2021-05-28",
+    "url_project": "www.voiramine.com",
+    "categorie": 3,
+    "date_add": "2021-05-04T16:18:18.389Z",
+    "date_update": "2021-05-25T23:05:08.843Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 4,
+  "fields": {
+    "name": "Zay Shop",
+    "title": "Pharetra massa",
+    "description": "Quiconque a la cupidité. Et personne n'a à empêcher un reçoit le reste, pour le. Parce que cet homme a fui les devoirs à l'avantage, on se rend compte que c'est un quas.",
+    "client": "Tano Martin",
+    "date_project": "2021-05-12",
+    "url_project": "tano.com",
+    "categorie": 1,
+    "date_add": "2021-05-25T23:08:12.695Z",
+    "date_update": "2021-05-25T23:12:09.458Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 1,
+  "fields": {
+    "picture": "portfolio-4_ojBNcu4.jpg",
+    "projet": 1,
+    "date_add": "2021-05-04T16:21:34.427Z",
+    "date_update": "2021-05-25T23:08:36.639Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 2,
+  "fields": {
+    "picture": "portfolio-1.jpg",
+    "projet": 1,
+    "date_add": "2021-05-04T16:23:34.420Z",
+    "date_update": "2021-05-25T23:08:42.846Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 4,
+  "fields": {
+    "picture": "portfolio-9.jpg",
+    "projet": 1,
+    "date_add": "2021-05-04T16:23:55.659Z",
+    "date_update": "2021-05-25T23:08:49.790Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 5,
+  "fields": {
+    "picture": "portfolio-8.jpg",
+    "projet": 1,
+    "date_add": "2021-05-04T16:24:04.570Z",
+    "date_update": "2021-05-25T23:08:56.742Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 6,
+  "fields": {
+    "picture": "portfolio-7.jpg",
+    "projet": 2,
+    "date_add": "2021-05-04T16:24:12.930Z",
+    "date_update": "2021-05-25T23:09:04.147Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 7,
+  "fields": {
+    "picture": "portfolio-5.jpg",
+    "projet": 2,
+    "date_add": "2021-05-04T16:24:23.661Z",
+    "date_update": "2021-05-25T23:09:14.166Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 8,
+  "fields": {
+    "picture": "portfolio-2_qm5qayU.jpg",
+    "projet": 2,
+    "date_add": "2021-05-04T16:24:31.233Z",
+    "date_update": "2021-05-25T23:09:19.847Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 9,
+  "fields": {
+    "picture": "PictureProject_file/seasonal-1.jpg",
+    "projet": 3,
+    "date_add": "2021-05-25T23:10:04.293Z",
+    "date_update": "2021-05-25T23:10:04.294Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 10,
+  "fields": {
+    "picture": "PictureProject_file/image_5.jpg",
+    "projet": 3,
+    "date_add": "2021-05-25T23:10:13.749Z",
+    "date_update": "2021-05-25T23:10:13.749Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 11,
+  "fields": {
+    "picture": "PictureProject_file/image_4.jpg",
+    "projet": 3,
+    "date_add": "2021-05-25T23:10:23.848Z",
+    "date_update": "2021-05-25T23:10:23.848Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 12,
+  "fields": {
+    "picture": "PictureProject_file/bg_1.jpg",
+    "projet": 4,
+    "date_add": "2021-05-25T23:10:34.222Z",
+    "date_update": "2021-05-25T23:10:34.222Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.pictureproject",
+  "pk": 13,
+  "fields": {
+    "picture": "PictureProject_file/seasonal-3.jpg",
+    "projet": 4,
+    "date_add": "2021-05-25T23:10:43.910Z",
+    "date_update": "2021-05-25T23:10:43.910Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 1,
+  "fields": {
+    "name": "Tano Martin",
+    "poste": "Ceo & Designer",
+    "picture": "testimonials-5.jpg",
+    "message": "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.",
+    "date_add": "2021-05-06T20:18:04.532Z",
+    "date_update": "2021-05-06T20:18:04.532Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 2,
+  "fields": {
+    "name": "Azeez",
+    "poste": "Store ower",
+    "picture": "testimonials-4.jpg",
+    "message": "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+    "date_add": "2021-05-06T20:19:20.474Z",
+    "date_update": "2021-05-06T20:19:20.474Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 3,
+  "fields": {
+    "name": "Marie Noelle",
+    "poste": "Desinger",
+    "picture": "testimonials-3.jpg",
+    "message": "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.",
+    "date_add": "2021-05-06T20:20:07.311Z",
+    "date_update": "2021-05-06T20:20:07.311Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 4,
+  "fields": {
+    "name": "Marie Christelle",
+    "poste": "Saul Goodwoman",
+    "picture": "testimonials-2.jpg",
+    "message": "Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
+    "date_add": "2021-05-06T20:21:03.820Z",
+    "date_update": "2021-05-06T20:21:03.820Z",
+    "status": true
+  }
+},
+{
+  "model": "portfolio.testimonial",
+  "pk": 5,
+  "fields": {
+    "name": "Amirou Diallo",
+    "poste": "Freelancer",
+    "picture": "testimonials-1.jpg",
+    "message": "Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
+    "date_add": "2021-05-06T20:21:58.145Z",
+    "date_update": "2021-05-06T20:21:58.145Z",
+    "status": true
+  }
+}
+]
