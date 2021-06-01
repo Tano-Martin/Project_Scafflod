@@ -30,6 +30,7 @@ class PrestationAdmin(admin.ModelAdmin):
 class PackAdmin(admin.ModelAdmin):
     list_display = ('title', 'price', 'period', 'marque', 'title_marque', 'activate', 'date_add', 'date_update', 'status')
     date_hierarchy = 'date_add'
+    filter_horizontal = ('advantage', )
     list_editable = ['status']
 
 @admin.register(models.Advantage)

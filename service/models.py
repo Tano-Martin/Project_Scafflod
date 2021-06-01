@@ -53,6 +53,7 @@ class Pack(models.Model):
     marque = models.BooleanField(default=False)
     title_marque = models.CharField(max_length=255, null=True, blank=True)
     activate = models.BooleanField(default=False)
+    advantage = models.ManyToManyField("service.Advantage", related_name="advantage_pack")
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -67,7 +68,6 @@ class Pack(models.Model):
 class Advantage(models.Model):
     title = models.CharField(max_length=255)
     title_activate = models.BooleanField(default=True)
-    pack = models.ManyToManyField("service.Pack", related_name="advantage_pack")
     date_add = models.DateTimeField(auto_now_add=True)
     date_update = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
@@ -77,5 +77,5 @@ class Advantage(models.Model):
         verbose_name_plural = 'Advantages'
 
     def __str__(self):
-        return self.title
+        return f'{self.title} : active={self.title_activate}'
 

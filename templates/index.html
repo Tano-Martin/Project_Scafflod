@@ -123,19 +123,18 @@
               </ul>
             </div>
           </div>
-
           <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             {% for projet in projets %}     
               <div class="col-lg-4 col-md-6 portfolio-item filter-{{projet.categorie.id}}">
                 <div class="portfolio-wrap">
-                  <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" class="img-fluid" alt="">
+                  <img src="{{projet.project_pictures.first.picture.url}}" class="img-fluid" alt="">
                   <div class="portfolio-info">
                     <h4>{{projet.name}}</h4>
                     <p>{{projet.title}}</p>
                   </div>
 
                   <div class="portfolio-links">
-                    <a href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                    <a href="{{projet.project_pictures.first.picture.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{projet.name}}"><i class="bx bx-plus"></i></a>
                     <a href="{% url 'detail' projet.id %}" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
                 </div>
@@ -254,8 +253,8 @@
                   <h3>{{ pack.title }}</h3>
                   <h4><sup>$</sup>{{ pack.price }}<span> / {{ pack.period }}</span></h4>
                   <ul>
-                    {% for avantage in packs.advantage_pack.all %}
-                      <li>{{ avantage.title }}</li>
+                    {% for avantage in pack.advantage.all %}
+                      <li {% if not avantage.title_activate %}class="na"{% endif %}>{{ avantage.title }}</li>
                     {% endfor %}
                   </ul>
                   <div class="btn-wrap">
@@ -362,7 +361,6 @@
   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
   <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
   <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
 
   <!-- Template Main JS File -->

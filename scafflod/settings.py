@@ -10,9 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-import os
-import django_heroku
-
 from pathlib import Path
 
 
@@ -29,7 +26,7 @@ SECRET_KEY = 'django-insecure-9=*rf=lljc)l)vy!4-foqbg-$f7jx=&8v858nu48lvjak#5z)2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['scaffold-project.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -85,7 +82,7 @@ WSGI_APPLICATION = 'scafflod.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(BASE_DIR / 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -132,7 +129,7 @@ MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [BASE_DIR /'static']
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
+STATIC_ROOT = BASE_DIR / 'static_cdn'
 
 MEDIA_ROOT = BASE_DIR / 'media_cdn'
 
@@ -140,6 +137,3 @@ MEDIA_ROOT = BASE_DIR / 'media_cdn'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
