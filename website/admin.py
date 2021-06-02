@@ -9,6 +9,7 @@ class AboutAdmin(admin.ModelAdmin):
     list_display = ('images_view', 'title', 'date_add', 'date_update', 'status')
     date_hierarchy = 'date_add'
     list_editable = ['status']
+    filter_horizontal = ('option', )
 
     def images_view(self, obj):
         return mark_safe(f'<img src="{obj.picture.url}" style="height:100px; width:150px">')
