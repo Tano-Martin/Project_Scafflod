@@ -18,11 +18,21 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from rest_framework import routers
+from API.portfolio.urls import router as router_portfolio
+from API.service.urls import router as router_service
+from API.website.urls import router as router_website
+
+router = routers.DefaultRouter()
+router.registry.extend(router_portfolio.registry)
+router.registry.extend(router_service.registry)
+router.registry.extend(router_website.registry)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("website.urls")),
-    
+    path('api/', include(router.urls)),
 ]
 
 
