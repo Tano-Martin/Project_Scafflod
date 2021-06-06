@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'website.apps.WebsiteConfig',
     'service.apps.ServiceConfig',
     'portfolio.apps.PortfolioConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
