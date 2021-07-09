@@ -1,8 +1,12 @@
+import json
+from django.http.response import JsonResponse
 from django.shortcuts import redirect, render
 from . import models
 from .forms import ContactForm, NewsletterForm
 from portfolio import models as models_portfolio
 from service import models as models_service
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 def index(request):
@@ -28,6 +32,13 @@ def portfolio(request, id):
     return render(request, "portfolio-details.html", locals())
 
 #formulaire
+def is_email(email):
+    try:
+        validate_email(email)
+        return True
+    except:
+        return False
+
 def contactPost(request):        
     if request.method == 'POST':
         formCont = ContactForm(request.POST)
@@ -38,12 +49,26 @@ def contactPost(request):
         formCont = ContactForm()
         return redirect('index')
 
+@csrf_exempt
 def newsletterPost(request):
+    message = ""
+    success = False
     if request.method == 'POST':
-        formnew = NewsletterForm(request.POST)
-        if formnew.is_valid():
-            formnew.save()
-        return redirect('index')
-    else :
-        formnew = NewsletterForm()
-        return redirect('index')
+        newEmail = json.loads(request.POST.get('email'))
+        if newEmail.isspace():
+            message = "Veuillez remplir ce champs avant de le soumettre !"
+        elif is_email(newEmail):
+            message = "Email invalide"
+        else:
+            news, created = models.Newsletter.objects.get_or_create(email=newEmail)
+            news.save()
+            if created:
+                message = "Email envoyé avec succès"
+            else:
+                message = "Email déjà envoyé"
+            success = True
+    datas = {
+        "success": success,
+        "message": message
+    }
+    return JsonResponse(datas, safe=False)
