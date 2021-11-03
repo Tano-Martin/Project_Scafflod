@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+import django_heroku
 from pathlib import Path
 
 
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-9=*rf=lljc)l)vy!4-foqbg-$f7jx=&8v858nu48lvjak#5z)2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -154,3 +155,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+django_heroku.settings(locals())
