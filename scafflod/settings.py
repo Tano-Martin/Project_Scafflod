@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -80,12 +82,25 @@ WSGI_APPLICATION = 'scafflod.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# configuration database postgresql
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+	'default': {
+		'ENGINE': 'django.db.backends.postgresql',
+		'NAME': 'd7ci9hqi0limh2',
+		'USER': 'kixttcjkwydxpy',
+		'PASSWORD': '331a5eb277166e04650eb947ad444f397ca8678acd00d5f534cf87ffce02e21c',
+		'HOST': 'ec2-34-233-112-169.compute-1.amazonaws.com',
+		'PORT': 5432,
+	}
 }
+
+# configuration database sqlite3
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -126,15 +141,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media/' 
 
-STATICFILES_DIRS = [BASE_DIR /'static']
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] 
 
-STATIC_ROOT = BASE_DIR / 'static_cdn'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn') 
 
-MEDIA_ROOT = BASE_DIR / 'media_cdn'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
